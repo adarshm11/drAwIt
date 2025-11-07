@@ -1,139 +1,148 @@
-# drAwIt - Interactive Whiteboard Application
+# drAwIt
 
-An interactive collaborative whiteboard application built with Next.js, Konva.js, and Convex.
+A real-time collaborative whiteboard application where multiple users can draw, sketch, and create together on a shared canvas. The ultimate goal is to integrate AI-powered drawing capabilities for generating and enhancing artwork.
 
-## Phase 1: Basic Drawing ✅
+## Purpose
 
-Phase 1 is complete! Basic drawing functionality implemented.
+drAwIt is an interactive whiteboard that enables users to:
+- Draw freehand with customizable colors and stroke widths
+- Create shapes (rectangles, circles, lines)
+- Collaborate in real-time with multiple users
+- Save and manage multiple drawing boards
+- See other users' cursors and presence in real-time
+- *(Coming soon)* Generate drawings using AI from text prompts
 
-## Phase 2: Backend Persistence ✅
+Perfect for brainstorming sessions, teaching, design collaboration, or just having fun drawing with friends.
 
-Phase 2 is now complete! The application now includes:
+## Tech Stack
 
-### Features Implemented
-
-**Phase 1 Features:**
-- ✅ Basic canvas implementation with Konva.js
-- ✅ Drawing tools: Pencil, Eraser, Rectangle, Circle, Line
-- ✅ Color picker with preset colors
-- ✅ Stroke width selector
-- ✅ Clear canvas functionality
-- ✅ Local undo/redo with full history
-- ✅ Keyboard shortcuts (Ctrl/Cmd + Z for undo, Ctrl/Cmd + Shift + Z for redo)
-- ✅ Responsive UI with Tailwind CSS
-
-**Phase 2 Features:**
-- ✅ Convex backend integration
-- ✅ Real-time stroke persistence
-- ✅ Auto-save drawings to database
-- ✅ Board management:
-  - Create new boards
-  - Delete boards
-  - Board list view with previews
-- ✅ Load existing boards from database
-- ✅ Board metadata (title, last modified date)
+- **Frontend**: Next.js 14 (App Router), React 18, TypeScript
+- **Canvas Rendering**: Konva.js with React Konva
+- **Real-time Backend**: Convex
+- **Styling**: Tailwind CSS
+- **State Management**: Zustand
+- **Icons**: Lucide React
 
 ## Getting Started
 
 ### Prerequisites
-- Node.js 18+ installed
+
+- Node.js 18 or higher
 - npm, yarn, or pnpm package manager
-- Convex account (free at [convex.dev](https://convex.dev))
+- A free Convex account ([convex.dev](https://convex.dev))
 
 ### Installation
 
-1. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-# or
-pnpm install
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/adarshm11/drAwIt.git
+   cd drAwIt
+   ```
 
-2. Setup Convex:
-```bash
-npx convex dev
-```
-This will:
-- Create a new Convex project (or link to an existing one)
-- Generate your `NEXT_PUBLIC_CONVEX_URL`
-- Start the Convex development server
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-3. Run the development server (in a new terminal):
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+3. **Set up Convex**
+   ```bash
+   npx convex dev
+   ```
+   This will:
+   - Prompt you to create/link a Convex project
+   - Generate your environment configuration
+   - Start the Convex development server
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+4. **Start the development server** (in a new terminal)
+   ```bash
+   npm run dev
+   ```
 
-### Usage
+5. **Open the application**
+   
+   Navigate to [http://localhost:3000](http://localhost:3000) in your browser
 
-1. **Create a Board**: Click "Create New Board" on the home page
-2. **Draw**: Use the toolbar on the left:
-   - Select tools: Pencil, Eraser, Rectangle, Circle, Line
-   - Choose colors with the color picker
-   - Adjust stroke width with the slider
-   - Use Undo/Redo buttons or keyboard shortcuts
-   - Clear canvas to start fresh
-3. **Save**: Drawings auto-save to Convex in real-time
-4. **Manage Boards**:
-   - View all boards on the home page
-   - Delete boards by hovering and clicking the trash icon
-   - Click any board to open and continue editing
+## Usage
 
-## Project Structure
+1. **Create a Board**: Click "Create New Board" from the home page
+2. **Start Drawing**: 
+   - Select a tool from the toolbar (Pencil, Eraser, Rectangle, Circle, Line)
+   - Pick a color from the color picker
+   - Adjust stroke width as needed
+   - Draw on the canvas!
+3. **Collaborate**: Share your board URL with others to draw together in real-time
+4. **Undo/Redo**: Use the toolbar buttons or keyboard shortcuts (Cmd/Ctrl+Z, Cmd/Ctrl+Shift+Z)
+5. **Manage Boards**: Return to the home page to view all your boards or create new ones
 
-```
-drAwIt/
-├── app/                    # Next.js app router
-├── components/            # React components
-│   ├── canvas/           # Canvas-related components
-│   ├── collaboration/    # (Phase 3)
-│   └── layout/          # Layout components
-├── convex/              # Convex backend (Phase 2)
-├── lib/                 # Utilities and stores
-│   ├── hooks/          # Custom React hooks
-│   ├── store/          # Zustand state management
-│   └── utils/          # Utility functions
-├── types/              # TypeScript type definitions
-└── public/            # Static assets
-```
+## Features
 
-## Tech Stack
+### Implemented (Phases 1-3)
 
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Canvas**: Konva.js + React Konva
-- **Styling**: Tailwind CSS
-- **State Management**: Zustand
-- **Backend**: Convex (setup complete, Phase 2)
-- **Icons**: Lucide React
+✅ **Drawing Tools**
+- Freehand pencil drawing
+- Eraser tool
+- Shape tools (rectangle, circle, line)
+- Color picker with preset colors
+- Adjustable stroke width
+- Clear canvas
 
-## Next Steps
+✅ **Board Management**
+- Create and delete boards
+- Board list with thumbnails
+- Auto-save to database
+- Load existing boards
 
-See [PLAN.md](./PLAN.md) for the complete implementation roadmap.
+✅ **Real-time Collaboration**
+- Live drawing synchronization across users
+- User presence indicators
+- Real-time cursor tracking
+- User identification with names and colors
+- Join/leave notifications
 
-### Coming in Phase 3:
-- Real-time collaboration
-- Multi-user presence system
-- Live cursor tracking
-- User names and colors
-- Collaborative drawing synchronization
+✅ **User Experience**
+- Undo/redo functionality
+- Keyboard shortcuts
+- Responsive design
+- Smooth, optimized rendering
 
-### Future Phases:
-- Text tool with formatting
+## Future Development
+
+### Ultimate Goal: AI-Powered Drawing
+The long-term vision for drAwIt is to integrate AI capabilities that allow users to generate drawings through natural language prompts, auto-complete sketches, and enhance existing drawings with AI assistance.
+
+### Planned Features
+
+**Advanced Drawing Tools**
+- Text tool with formatting options
 - Image upload and placement
-- Selection tool (move, resize, rotate)
-- Layers panel
-- Export (PNG, SVG, PDF)
-- Board templates
-- Version history
+- Selection tool (move, resize, rotate objects)
+- Layers panel for managing drawing elements
+- Copy/paste functionality
+- Export boards (PNG, SVG, PDF)
+- Zoom and pan controls
+- Grid and snap-to-grid options
 
-## License
+**Enhanced Collaboration**
+- User authentication system
+- Board permissions (public/private)
+- User invitations to boards
+- Comments and annotations
+- Version history and board snapshots
+- Pre-made board templates
 
-MIT
+**AI Features**
+- AI-powered drawing generation from text prompts
+- Smart shape recognition and refinement
+- Auto-complete for partial drawings
+- Style transfer and artistic filters
+- AI suggestions for composition and layout
+- Background generation and removal
+
+**Polish & Optimization**
+- Performance improvements for large boards
+- Mobile-responsive design enhancements
+- Touch support for tablets
+- Accessibility improvements
+- Dark mode theme
+- Advanced keyboard shortcuts
+- Infinite canvas
