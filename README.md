@@ -76,9 +76,7 @@ Perfect for brainstorming sessions, teaching, design collaboration, or just havi
 
 ## Features
 
-### Implemented (Phases 1-3)
-
-✅ **Drawing Tools**
+**Drawing Tools**
 - Freehand pencil drawing
 - Eraser tool
 - Shape tools (rectangle, circle, line)
@@ -86,20 +84,20 @@ Perfect for brainstorming sessions, teaching, design collaboration, or just havi
 - Adjustable stroke width
 - Clear canvas
 
-✅ **Board Management**
+**Board Management**
 - Create and delete boards
 - Board list with thumbnails
 - Auto-save to database
 - Load existing boards
 
-✅ **Real-time Collaboration**
+**Real-time Collaboration**
 - Live drawing synchronization across users
 - User presence indicators
 - Real-time cursor tracking
 - User identification with names and colors
 - Join/leave notifications
 
-✅ **User Experience**
+**User Experience**
 - Undo/redo functionality
 - Keyboard shortcuts
 - Responsive design
